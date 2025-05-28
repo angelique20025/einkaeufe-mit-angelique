@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkäufe mit Angelique</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/263/263142.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        header img {
+            width: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        main {
+            padding: 2rem;
+            max-width: 600px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #187bcd;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 1rem;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Cart Icon">
+    <h1>Einkäufe mit Angelique</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Lieferinformationen</h2>
+        <p>Angelique liefert Ihre Einkäufe direkt zu Ihnen nach Hause.</p>
+        <ul>
+            <li><strong>Lieferzeit:</strong> nur donnerstags, 13:00–19:00</li>
+            <li><strong>Preis:</strong> 15–20 € im Umkreis von 6 km, 40 € außerhalb</li>
+            <li><strong>Kontakt:</strong> angeliki.michalaki@gmail.com</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Bestellformular</h2>
+        <form action="https://formsubmit.co/angeliki.michalaki@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Neue Bestellung von Einkäufe mit Angelique">
+            <input type="hidden" name="_captcha" value="false">
+            <label for="name">Ihr Name:</label>
+            <input type="text" id="name" name="Name" required>
+
+            <label for="email">Ihre E-Mail:</label>
+            <input type="email" id="email" name="Email" required>
+
+            <label for="address">Lieferadresse:</label>
+            <textarea id="address" name="Adresse" rows="2" required></textarea>
+
+            <label for="items">Einkaufsliste:</label>
+            <textarea id="items" name="Einkaufsliste" rows="5" placeholder="Bitte schreiben Sie hier Ihre gewünschten Produkte auf..." required></textarea>
+
+            <button type="submit">Bestellung absenden</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    © 2025 Einkäufe mit Angelique · Alle Rechte vorbehalten
+</footer>
+
+</body>
+</html>
