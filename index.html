@@ -1,112 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Einkäufe mit Angelique</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/263/263142.png" type="image/png">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/263/263142.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
+            background-color: #e6f0ff;
+            color: #003366;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #1e90ff;
+            background-color: #0055cc;
             color: white;
-            padding: 1rem;
+            padding: 20px;
             text-align: center;
         }
         header img {
-            width: 40px;
+            height: 40px;
             vertical-align: middle;
-            margin-right: 10px;
         }
         main {
-            padding: 2rem;
-            max-width: 600px;
+            padding: 20px;
+            max-width: 700px;
             margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 20px;
         }
-        section {
-            margin-bottom: 2rem;
+        h2 {
+            color: #003366;
         }
         form {
             display: flex;
             flex-direction: column;
         }
-        input, textarea {
-            margin-bottom: 1rem;
-            padding: 0.75rem;
-            border: 1px solid #ccc;
+        input, textarea, button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 1em;
             border-radius: 5px;
-            font-size: 1rem;
+            border: 1px solid #ccc;
         }
         button {
-            background-color: #1e90ff;
+            background-color: #0055cc;
             color: white;
             border: none;
-            padding: 1rem;
-            border-radius: 5px;
-            font-size: 1rem;
             cursor: pointer;
         }
         button:hover {
-            background-color: #187bcd;
+            background-color: #003399;
         }
         footer {
             text-align: center;
-            font-size: 0.9rem;
-            padding: 1rem;
-            background-color: #f8f8f8;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #666;
         }
     </style>
 </head>
 <body>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Warenkorb">
+        <h1>Einkäufe mit Angelique</h1>
+    </header>
 
-<header>
-    <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Cart Icon">
-    <h1>Einkäufe mit Angelique</h1>
-</header>
-
-<main>
-    <section>
-        <h2>Lieferinformationen</h2>
-        <p>Angelique liefert Ihre Einkäufe direkt zu Ihnen nach Hause.</p>
+    <main>
+        <h2>Persönlicher Einkaufsservice in Schwebheim</h2>
+        <p><strong>Lieferzeit:</strong> Donnerstags von 13:00 bis 19:00 Uhr</p>
+        <p><strong>Liefergebiet:</strong> Schwebheim und Umgebung</p>
         <ul>
-            <li><strong>Lieferzeit:</strong> nur donnerstags, 13:00–19:00</li>
-            <li><strong>Preis:</strong> 15–20 € im Umkreis von 6 km, 40 € außerhalb</li>
-            <li><strong>Kontakt:</strong> angeliki.michalaki@gmail.com</li>
+            <li>Bis 6 km: 15–20 € (abhängig vom Einkauf)</li>
+            <li>Ab 6 km: 40 €</li>
         </ul>
-    </section>
 
-    <section>
         <h2>Bestellformular</h2>
         <form action="https://formsubmit.co/angeliki.michalaki@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Neue Bestellung von Einkäufe mit Angelique">
-            <input type="hidden" name="_captcha" value="false">
-            <label for="name">Ihr Name:</label>
-            <input type="text" id="name" name="Name" required>
-
-            <label for="email">Ihre E-Mail:</label>
-            <input type="email" id="email" name="Email" required>
-
-            <label for="address">Lieferadresse:</label>
-            <textarea id="address" name="Adresse" rows="2" required></textarea>
-
-            <label for="items">Einkaufsliste:</label>
-            <textarea id="items" name="Einkaufsliste" rows="5" placeholder="Bitte schreiben Sie hier Ihre gewünschten Produkte auf..." required></textarea>
-
+            <input type="text" name="Name" placeholder="Ihr Name" required>
+            <input type="email" name="Email" placeholder="Ihre E-Mail-Adresse" required>
+            <textarea name="Einkaufsliste" rows="5" placeholder="Ihre Einkaufsliste..." required></textarea>
+            <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Bestellung! Angelique wird sich bald bei Ihnen melden.">
+            <input type="hidden" name="_template" value="box">
             <button type="submit">Bestellung absenden</button>
         </form>
-    </section>
-</main>
+    </main>
 
-<footer>
-    © 2025 Einkäufe mit Angelique · Alle Rechte vorbehalten
-</footer>
-
+    <footer>
+        <p>&copy; 2025 Einkäufe mit Angelique – Alle Rechte vorbehalten</p>
+    </footer>
 </body>
 </html>
