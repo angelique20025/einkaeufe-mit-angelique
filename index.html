@@ -50,6 +50,10 @@
             color: white;
             border: none;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
         button:hover {
             background-color: #003399;
@@ -60,6 +64,26 @@
             font-size: 0.9em;
             color: #666;
         }
+        .datenschutz {
+            font-size: 0.9em;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            color: #333;
+        }
+        .whatsapp {
+            margin-top: 20px;
+            font-size: 1em;
+        }
+        .whatsapp a {
+            color: #25D366;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .whatsapp a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -67,20 +91,22 @@
         <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Warenkorb">
         <h1>Einkäufe mit Angelique</h1>
     </header>
-<section id="vertrauen" style="background-color:#f0f8ff; padding: 20px; border-radius: 8px;">
-  <h2>Vertrauen &amp; Zuverlässigkeit</h2>
-  <p>Bei <strong>Einkäufe mit Angelique</strong> steht Vertrauen an erster Stelle.<br>
-  Ich bin Angelique und erledige Ihre Einkäufe persönlich, sorgfältig und pünktlich – als wäre es für meine eigene Familie.</p>
 
-  <ul>
-    <li>💙 <strong>Persönlicher Service:</strong> Keine anonyme Lieferung – Sie wissen genau, wer für Sie einkauft.</li>
-    <li>🛒 <strong>Individuelle Wünsche:</strong> Sie senden Ihre Einkaufsliste, und ich kümmere mich um den Rest.</li>
-    <li>🕐 <strong>Zuverlässige Zeiten:</strong> Ich liefere donnerstags zwischen 13:00 und 19:00 Uhr – pünktlich und stressfrei.</li>
-    <li>📍 <strong>Lokal &amp; nah:</strong> Ich bin aus Schwebheim und liefere mit Herz in der Umgebung.</li>
-  </ul>
+    <section id="vertrauen" style="background-color:#f0f8ff; padding: 20px; border-radius: 8px;">
+        <h2>Vertrauen &amp; Zuverlässigkeit</h2>
+        <p>Bei <strong>Einkäufe mit Angelique</strong> steht Vertrauen an erster Stelle.<br>
+        Ich bin Angelique und erledige Ihre Einkäufe persönlich, sorgfältig und pünktlich – als wäre es für meine eigene Familie.</p>
 
-  <p>Ihre Zufriedenheit liegt mir am Herzen. Bei Fragen oder Sonderwünschen schreiben Sie mir gern direkt!</p>
-</section>
+        <ul>
+            <li>💙 <strong>Persönlicher Service:</strong> Keine anonyme Lieferung – Sie wissen genau, wer für Sie einkauft.</li>
+            <li>🛒 <strong>Individuelle Wünsche:</strong> Sie senden Ihre Einkaufsliste, und ich kümmere mich um den Rest.</li>
+            <li>🕐 <strong>Zuverlässige Zeiten:</strong> Ich liefere donnerstags zwischen 13:00 und 19:00 Uhr – pünktlich und stressfrei.</li>
+            <li>📍 <strong>Lokal &amp; nah:</strong> Ich bin aus Schwebheim und liefere mit Herz in der Umgebung.</li>
+        </ul>
+
+        <p>Ihre Zufriedenheit liegt mir am Herzen. Bei Fragen oder Sonderwünschen schreiben Sie mir gern direkt!</p>
+    </section>
+
     <main>
         <h2>Persönlicher Einkaufsservice in Schwebheim</h2>
         <p><strong>Lieferzeit:</strong> Donnerstags von 13:00 bis 19:00 Uhr</p>
@@ -94,11 +120,30 @@
         <form action="https://formsubmit.co/angeliki.michalaki@gmail.com" method="POST">
             <input type="text" name="Name" placeholder="Ihr Name" required>
             <input type="email" name="Email" placeholder="Ihre E-Mail-Adresse" required>
+            <input type="text" name="Lieferadresse" placeholder="Lieferadresse" required>
             <textarea name="Einkaufsliste" rows="5" placeholder="Ihre Einkaufsliste..." required></textarea>
-            <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Bestellung! Angelique wird sich bald bei Ihnen melden.">
+            <input type="date" name="Lieferdatum" required>
+
+            <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Bestellung bei ‚Einkäufe mit Angelique‘! Wir melden uns bald bei Ihnen.">
             <input type="hidden" name="_template" value="box">
-            <button type="submit">Bestellung absenden</button>
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit">🛒 Bestellung absenden</button>
         </form>
+
+        <div class="whatsapp">
+            📱 Kontakt via WhatsApp: 
+            <a href="https://wa.me/4915562583083" target="_blank">+49 15562 583083</a>
+        </div>
+
+        <div class="datenschutz">
+            <h3>🔐 Datenschutz</h3>
+            <p>
+                Der Schutz Ihrer persönlichen Daten ist uns sehr wichtig. Ihre Angaben (Name, Adresse, Einkaufsliste, E-Mail) werden ausschließlich zur Abwicklung Ihrer Bestellung verwendet und nicht an Dritte weitergegeben.<br><br>
+                Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten gemäß DSGVO.<br>
+                Bei Fragen wenden Sie sich bitte an: <strong>Angelique Michalaki</strong> – angeliki.michalaki@gmail.com
+            </p>
+        </div>
     </main>
 
     <footer>
